@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage> {
   void moveSnake() {
     switch (currentDirection) {
       case snake_Direction.RIGHT:
-        { //add a head
-          // if snake is at right wall, need to re-adjust
+        { //head
+          
           if (snakePos.last % rowSize == 9) {
             snakePos.add(snakePos.last + 1 - rowSize);
           }
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
         break;
       case snake_Direction.LEFT:
         {
-          //add a head
+          // head
           if (snakePos.last % rowSize == 0) {
             snakePos.add(snakePos.last - 1 + rowSize);
           }
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
         break;
       case snake_Direction.UP:
         {
-          //add a head
+          // head
           if (snakePos.last < rowSize) {
             snakePos.add(snakePos.last - rowSize + totalNumberofSquares);
           }
@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
         break;
       case snake_Direction.DOWN:
         {
-          //add a head
+          // head
           if (snakePos.last + rowSize > totalNumberofSquares) {
             snakePos.add(snakePos.last + rowSize - totalNumberofSquares);
           }
@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
 
       default:
     }
-    //eat food
+    // food
     if (snakePos.last == foodPos) {
       eatfood();
     } else {
@@ -171,8 +171,8 @@ class _HomePageState extends State<HomePage> {
                     ),
 
 
-                    //high scores,top 5 0r top10
-                    Text('highscores..')
+                    
+                    
                   ],
                 ),
               ]
