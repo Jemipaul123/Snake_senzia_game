@@ -1,2 +1,2 @@
-# latest
-includes snake game 
+Snake Senzia
+- A flutter snake game
